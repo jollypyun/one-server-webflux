@@ -1,0 +1,17 @@
+spring:
+  r2dbc:
+    password: password
+    url: r2dbc:mariadb://localhost:3306
+    username: root
+
+  data:
+    mongodb:
+      host: root
+      password: password
+      uri: mongodb://localhost:27017/db
+
+
+client:
+  url: "http://apis.data.go.kr/1262000/CountryKorTradeService2"
+  path: "/getCountryKorTradeList2"
+  key: "2R4dpqjc8wA5hk0mcHWWaxp%2FFtSKWGggntnC4aG%2BcL%2FYTcclK3dqc6etDCmc2autJ0YEuekme85qwh1IlLb3mA%3D%3D"
