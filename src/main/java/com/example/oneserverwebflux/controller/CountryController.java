@@ -1,6 +1,7 @@
 package com.example.oneserverwebflux.controller;
 
 import com.example.oneserverwebflux.model.request.SearchRequest;
+import com.example.oneserverwebflux.model.response.CountryTradeResponse;
 import com.example.oneserverwebflux.service.CountryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,7 @@ public class CountryController {
     private final CountryService countryService;
 
     @GetMapping("/")
-    public Mono<String> getInfo(SearchRequest request) {
+    public Mono<CountryTradeResponse> getInfo(SearchRequest request) {
         return countryService.getInfo(request);
     }
 }
