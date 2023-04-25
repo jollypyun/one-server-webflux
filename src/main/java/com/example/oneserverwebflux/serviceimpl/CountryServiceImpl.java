@@ -20,8 +20,6 @@ public class CountryServiceImpl implements CountryService {
 
     @Override
     public Mono<CountryTradeResponse> getInfo(SearchRequest request) {
-        Mono<CountryTradeResponse> mono = countryClient.getTradeAll(request);
-        log.info(mono.toString());
-        return mono;
+        return countryClient.getTradeAll(request);
     }
 }
