@@ -12,6 +12,7 @@ public record TradeData(String country_eng_nm,
                         String yt_trade_year) {
     public Trade of() {
         return Trade.builder()
+                .id(this.country_eng_nm+":"+this.yt_trade_year)
                 .countryEngNm(this.country_eng_nm)
                 .countryIsoAlp2(this.country_iso_alp2)
                 .countryNm(this.country_nm)
